@@ -10,6 +10,7 @@ project_structure = {
             "core": ["config.py", "logger.py"],
             "services": [
                 "ocr.py",
+                "data_preprocessing.py",
                 "nlp_pipeline.py",
                 "llm_chain.py",
                 "vector_store.py",
@@ -54,6 +55,8 @@ def create_structure(base_path, struct):
             elif isinstance(value, list):
                 for file in value:
                     open(os.path.join(dir_path, file), 'a').close()
+
+
 
 if __name__ == "__main__":
     create_structure(".", project_structure)
